@@ -64,6 +64,7 @@ jobs:
       - name: Create source distribution
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: "1.4.0"
           command: sdist
           args: >
             --manifest-path py-polars/Cargo.toml
@@ -177,6 +178,7 @@ jobs:
       - name: Build wheel
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: "1.4.0"
           command: build
           target: ${{ steps.target.outputs.target }}
           args: >
